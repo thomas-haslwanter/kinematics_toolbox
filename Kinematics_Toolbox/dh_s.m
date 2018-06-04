@@ -36,13 +36,13 @@ if nargin < 2
     d = 0;
 end
 
-translation_x = zeros(3,1);
+translation_x = sym(zeros(3,1));
 if isstr(r)
     r = sym(r);
 end
 translation_x(1) = r;
 
-translation_z = zeros(3,1);
+translation_z = sym(zeros(3,1));
 if isstr(d)
     d = sym(d);
 end
