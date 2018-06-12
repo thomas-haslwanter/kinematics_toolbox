@@ -8,12 +8,13 @@
 %	E.g.: view_orientation(pos, 5);
 %         view_orientation(pos, 1, 'test.avi');
 % 
-% ThH, May-2011
-% Ver 1.1
+% ThH, June-2018
+% Ver 1.2
 % **********************
 
 function view_orientation(q_pos, spacer, aviFile)
 
+% set the defaults
 if nargin == 3
     videoFlag = 1;
     vidObj = VideoWriter(aviFile);
@@ -23,6 +24,15 @@ else
     videoFlag = 0;
 end
 
+if nargin == 1
+    spacer = 5
+end
+
+% Take only the vector-part of the quaternion
+if size(q_pos, 2) == 4
+    q_pos = q_vector(q_pos);
+end
+    
 % Get the data
 slim = .2;
 obj.x = [1 0 0];

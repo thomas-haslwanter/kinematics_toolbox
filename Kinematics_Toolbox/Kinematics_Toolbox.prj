@@ -1,13 +1,13 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="3498996785" file="C:\Users\p20529\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox\3D Kinematics.prj" location="C:\Users\p20529\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox" name="3D Kinematics" target="target.toolbox" target-name="Package Toolbox">
-    <param.appname>3D Kinematics</param.appname>
+  <configuration build-checksum="2382805834" file="C:\Users\p20529\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox\Kinematics_Toolbox.prj" location="C:\Users\p20529\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox" name="Kinematics_Toolbox" target="target.toolbox" target-name="Package Toolbox">
+    <param.appname>Kinematics_Toolbox</param.appname>
     <param.authnamewatermark>Thomas Haslwanter</param.authnamewatermark>
-    <param.email>thomas.haslwanter@fh-ooe.at</param.email>
-    <param.company>Univ. of Applied Sciences Upper Austria</param.company>
-    <param.summary>A library for scientific data analysis, with a focus on 3d kinematics.</param.summary>
+    <param.email>thomas.haslwanter@fh-linz.at</param.email>
+    <param.company>University of Applied Sciences Upper Austr</param.company>
+    <param.summary>"3D Kinematics" is a library for scientific data analysis, with a focus on 3d kinematics.</param.summary>
     <param.description>"3D Kinematics" is a library for scientific data analysis, with a focus on 3d kinematics.
 
-It is hosted under https://github.com/thomas-haslwanter/kinematics-matlab, and contains the following modules:
+It ontains the following routines:
 
 imus Analysis routines for IMU-recordings
 
@@ -48,41 +48,14 @@ vector Functions for working with vectors
 
 view Visualization of time-series data, and of 3D orientations</param.description>
     <param.screenshot>${PROJECT_ROOT}\kinematics.png</param.screenshot>
-    <param.version>1.5</param.version>
-    <param.output>${PROJECT_ROOT}\3D Kinematics.mltbx</param.output>
-    <param.products.name>
-      <item>MATLAB</item>
-      <item>Symbolic Math Toolbox</item>
-    </param.products.name>
-    <param.products.id>
-      <item>1</item>
-      <item>15</item>
-    </param.products.id>
-    <param.products.version>
-      <item>9.3</item>
-      <item>8.0</item>
-    </param.products.version>
+    <param.version>1.7</param.version>
+    <param.output>${PROJECT_ROOT}\Kinematics_Toolbox.mltbx</param.output>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
     <param.platforms />
-    <param.guid>2377bb01-4c3f-4cc5-ae32-39a6b10ae638</param.guid>
-    <param.exclude.filters>% List files contained in your toolbox folder that you would like to exclude
-% from packaging.  Excludes should be listed relative to the toolbox folder.
-% Some examples of how to specify excludes are provided below:
-%
-% A single file in the toolbox folder:
-% .svn
-%
-% A single file in a subfolder of the toolbox folder:
-% example/.svn
-%
-% All files in a subfolder of the toolbox folder:
-% example/*
-%
-% All files of a certain name in all subfolders of the toolbox folder:
-% **/.svn
-%
-% All files matching a pattern in all subfolders of the toolbox folder:
-% **/*.bak
-%</param.exclude.filters>
+    <param.guid>f7b29bf8-b0fa-4699-9aa3-29828b180a8c</param.guid>
+    <param.exclude.filters />
     <param.examples>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;examples&gt;
    &lt;exampleCategory name="Kinematics_Toolbox"&gt;
@@ -294,7 +267,11 @@ view Visualization of time-series data, and of 3D orientations</param.descriptio
     <param.javaclasspath.excludes />
     <unset>
       <param.output />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
       <param.platforms />
+      <param.exclude.filters />
       <param.demosxml />
       <param.apps />
       <param.registered.apps />
@@ -316,6 +293,7 @@ view Visualization of time-series data, and of 3D orientations</param.descriptio
       <file>${PROJECT_ROOT}\check_input.m</file>
       <file>${PROJECT_ROOT}\copysign.m</file>
       <file>${PROJECT_ROOT}\data</file>
+      <file>${PROJECT_ROOT}\data.mat</file>
       <file>${PROJECT_ROOT}\deg2quat.m</file>
       <file>${PROJECT_ROOT}\deg2rad.m</file>
       <file>${PROJECT_ROOT}\demos.xml</file>
@@ -362,12 +340,38 @@ view Visualization of time-series data, and of 3D orientations</param.descriptio
       <file>${PROJECT_ROOT}\vector_angle.m</file>
       <file>${PROJECT_ROOT}\vector_length.m</file>
       <file>${PROJECT_ROOT}\view_orientation.m</file>
+      <file>${PROJECT_ROOT}\view_ts.fig</file>
+      <file>${PROJECT_ROOT}\view_ts.m</file>
+      <file>${PROJECT_ROOT}\view_ts2.m</file>
     </fileset.rootfiles>
     <fileset.depfun.included />
-    <fileset.depfun.excluded />
+    <fileset.depfun.excluded>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@MadgwickAHRS\MadgwickAHRS.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@MahonyAHRS\MahonyAHRS.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\char.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\Contents.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\display.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\double.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\end.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\eq.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\horzcat.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\inv.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\length.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\minus.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\mldivide.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\mrdivide.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\mtimes.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\ne.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\plus.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\quat.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\subsasgn.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\subsref.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\times.m</file>
+      <file>C:\Users\p20529\Documents\MATLAB\Add-Ons\Toolboxes\3D Kinematics\code\@quat\vertcat.m</file>
+    </fileset.depfun.excluded>
     <fileset.package />
     <build-deliverables>
-      <file location="C:\Users\p20529\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox" name="3D Kinematics.mltbx" optional="false">C:\Users\p20529\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox\3D Kinematics.mltbx</file>
+      <file location="C:\Users\p20529\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox" name="Kinematics_Toolbox.mltbx" optional="false">C:\Users\p20529\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox\Kinematics_Toolbox.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>

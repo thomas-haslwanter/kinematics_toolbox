@@ -18,5 +18,3 @@ otherwise
   error('Specify the quaternion component of q as q(4) or q(3,4)');
 end
 
-b = quat(b);
-

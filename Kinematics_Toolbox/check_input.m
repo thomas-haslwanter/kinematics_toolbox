@@ -12,6 +12,12 @@
 % * v2 -- Second input vector
 % * dim -- Dimension of input (has to be "1" or "2")
 % * fname -- Name of calling function
+%
+%% Output Arguments
+% * v1_checked -- v1, if necessary repeated to match v2
+% * v2_checked -- v2, if necessary repeated to match v1ber
+% 
+
 
 % --------------
 % Ver 0.1

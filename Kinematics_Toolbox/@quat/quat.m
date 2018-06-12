@@ -1,10 +1,27 @@
-%QUAT	Quaternion class constructor
-%QUAT	Quaternion class constructor
-%Program Structure:
-%\@quat\quat.m
-%*****************************************************************
+%% quat.quat
+%     Quaternion class constructor
+%
+%% Syntax
+%    quaternion = quat(in_data)
+%
+%% Input Arguments
+% in_data -- input data. Has to be an Nx3 or Nx4 matrix.
+%
+%% Output Arguments
+% quaternion -- Quaternion object
+%
+%% Examples
+% q = quat([0, 0.1, 0;
+%           0, 0, 0.1;
+%           0, 0.1, 0]);
+%
 
+% ------------------
+% ver:      0.1
+% author:   ThH
+% date:     May-2018
 
+function q = quat(a)
 
 if nargin == 0
   q.c = [];

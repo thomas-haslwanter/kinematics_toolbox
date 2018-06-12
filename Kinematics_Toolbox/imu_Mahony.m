@@ -43,7 +43,7 @@
 
 function q_out = imu_Mahony(rate, acc, omega, mag, kappa)
 
-if nargin == 4:
+if nargin == 4
     kappa = 0.5;     % default value
 end
 

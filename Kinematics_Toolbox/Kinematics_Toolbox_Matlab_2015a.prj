@@ -1,13 +1,13 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="2081645445" file="D:\Users\thomas\Data\CloudStation\3D_Kinematics\matlab\Kinematics_Toolbox\3D Kinematics - Matlab 2015a.prj" location="D:\Users\thomas\Data\CloudStation\3D_Kinematics\matlab\Kinematics_Toolbox" name="3D Kinematics - Matlab 2015a" target="target.toolbox" target-name="Package Toolbox">
-    <param.appname>3D Kinematics - Matlab 2015a</param.appname>
+  <configuration build-checksum="3755247215" file="D:\Users\thomas\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox\Kinematics_Toolbox_Matlab_2015a.prj" location="D:\Users\thomas\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox" name="Kinematics_Toolbox_Matlab_2015a" target="target.toolbox" target-name="Package Toolbox">
+    <param.appname>Kinematics_Toolbox_Matlab_2015a</param.appname>
     <param.authnamewatermark>Thomas Haslwanter</param.authnamewatermark>
     <param.email>thomas.haslwanter@fh-linz.at</param.email>
     <param.company>Univ. App. Sci. Upper Austria</param.company>
-    <param.summary>A library for scientific data analysis, with a focus on 3D kinematics.</param.summary>
+    <param.summary>"3D Kinematics" is a library for scientific data analysis, with a focus on 3d kinematics.</param.summary>
     <param.description>"3D Kinematics" is a library for scientific data analysis, with a focus on 3d kinematics.
 
-It is hosted under https://github.com/thomas-haslwanter/kinematics-matlab, and contains the following modules:
+It ontains the following routines:
 
 imus Analysis routines for IMU-recordings
 
@@ -48,25 +48,22 @@ vector Functions for working with vectors
 
 view Visualization of time-series data, and of 3D orientations</param.description>
     <param.screenshot>${PROJECT_ROOT}\kinematics.png</param.screenshot>
-    <param.version>1.5</param.version>
-    <param.output>${PROJECT_ROOT}\3D Kinematics - Matlab 2015a.mltbx</param.output>
+    <param.version>1.7</param.version>
+    <param.output>${PROJECT_ROOT}\Kinematics_Toolbox_Matlab_2015a.mltbx</param.output>
     <param.products.name>
       <item>MATLAB</item>
-      <item>Model Predictive Control Toolbox</item>
       <item>Symbolic Math Toolbox</item>
     </param.products.name>
     <param.products.id>
       <item>1</item>
-      <item>22</item>
       <item>15</item>
     </param.products.id>
     <param.products.version>
       <item>8.5</item>
-      <item>5.0.1</item>
       <item>6.2</item>
     </param.products.version>
     <param.platforms />
-    <param.guid>24b152f9-2abb-42db-a0c9-e282d4e9aaaa</param.guid>
+    <param.guid>f7b29bf8-b0fa-4699-9aa3-29828b180a8c</param.guid>
     <param.exclude.filters />
     <param.examples>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;examples&gt;
@@ -284,7 +281,7 @@ view Visualization of time-series data, and of 3D orientations</param.descriptio
       <param.apps />
     </unset>
     <fileset.rootdir>
-      <file>D:\Users\thomas\Data\CloudStation\3D_Kinematics\matlab\Kinematics_Toolbox</file>
+      <file>D:\Users\thomas\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox</file>
     </fileset.rootdir>
     <fileset.rootfiles>
       <file>${PROJECT_ROOT}\@MadgwickAHRS</file>
@@ -297,6 +294,7 @@ view Visualization of time-series data, and of 3D orientations</param.descriptio
       <file>${PROJECT_ROOT}\check_input.m</file>
       <file>${PROJECT_ROOT}\copysign.m</file>
       <file>${PROJECT_ROOT}\data</file>
+      <file>${PROJECT_ROOT}\data.mat</file>
       <file>${PROJECT_ROOT}\deg2quat.m</file>
       <file>${PROJECT_ROOT}\deg2rad.m</file>
       <file>${PROJECT_ROOT}\demos.xml</file>
@@ -343,57 +341,15 @@ view Visualization of time-series data, and of 3D orientations</param.descriptio
       <file>${PROJECT_ROOT}\vector_angle.m</file>
       <file>${PROJECT_ROOT}\vector_length.m</file>
       <file>${PROJECT_ROOT}\view_orientation.m</file>
+      <file>${PROJECT_ROOT}\view_ts.fig</file>
+      <file>${PROJECT_ROOT}\view_ts.m</file>
+      <file>${PROJECT_ROOT}\view_ts2.m</file>
     </fileset.rootfiles>
-    <fileset.depfun.included>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@MadgwickAHRS\MadgwickAHRS.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@MahonyAHRS\MahonyAHRS.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\char.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\Contents.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\display.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\double.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\end.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\eq.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\horzcat.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\inv.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\length.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\minus.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\mldivide.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\mrdivide.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\mtimes.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\ne.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\plus.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\quat.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\subsasgn.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\subsref.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\times.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\3D Kinematics\@quat\vertcat.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@MadgwickAHRS\MadgwickAHRS.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@MahonyAHRS\MahonyAHRS.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\char.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\Contents.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\display.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\double.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\end.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\eq.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\horzcat.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\inv.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\length.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\minus.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\mldivide.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\mrdivide.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\mtimes.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\ne.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\plus.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\quat.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\subsasgn.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\subsref.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\times.m</file>
-      <file>D:\Users\thomas\Documents\MATLAB\Toolboxes\Kinematics_Toolbox\@quat\vertcat.m</file>
-    </fileset.depfun.included>
+    <fileset.depfun.included />
     <fileset.depfun.excluded />
     <fileset.package />
     <build-deliverables>
-      <file location="D:\Users\thomas\Data\CloudStation\3D_Kinematics\matlab\Kinematics_Toolbox" name="3D Kinematics - Matlab 2015a.mltbx" optional="false">D:\Users\thomas\Data\CloudStation\3D_Kinematics\matlab\Kinematics_Toolbox\3D Kinematics - Matlab 2015a.mltbx</file>
+      <file location="D:\Users\thomas\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox" name="Kinematics_Toolbox_Matlab_2015a.mltbx" optional="false">D:\Users\thomas\Data\CloudStation\3D_kinematics_matlab\Kinematics_Toolbox\Kinematics_Toolbox_Matlab_2015a.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>

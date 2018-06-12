@@ -102,8 +102,8 @@ for idx1 = 1:data_len
     basisVectors = [magVec_n' cross(accelVec_n, magVec_n)' accelVec_n'];
 % 	RotBasis{1} = basisVectors;
 	quatRef = -rotmat_convert(basisVectors,'quat');
-	quatRef0 = sqrt(1-(quatRef(1)^2+quatRef(2)^2+quatRef(3)^2));
-	quatRef = [quatRef0 quatRef];
+% 	quatRef0 = sqrt(1-(quatRef(1)^2+quatRef(2)^2+quatRef(3)^2));
+% 	quatRef = [quatRef0 quatRef];
     % Update measurement vector z_k
     z_k(1:3) = angvelVec;
     z_k(4:7) = quatRef;
@@ -120,7 +120,7 @@ for idx1 = 1:data_len
     P_k = (eye(7)-K_k*H_k)*P_k;
     % Projection of state quaternions
     x_k(4:7) = x_k(4:7)'+q_mult(0.5*x_k(4:7)',[0 x_k(1:3)']);
-    x_k(4:7) = x_k(4:7)/norm(x_k(4:7));c
+    x_k(4:7) = x_k(4:7)/norm(x_k(4:7));
     x_k(1:3) = zeros(3,1);
 	x_k(1:3) = tstep*(-x_k(1:3)+z_k(1:3));
     q_out(idx1,:) = x_k(4:7);

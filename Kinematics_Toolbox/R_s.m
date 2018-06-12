@@ -10,7 +10,7 @@
 %    R_sym = R_s(dim, label) 
 %
 %% Input Arguments
-% * dim -- Axis of rotation. Has to be "0", "1", or "2"
+% * dim -- Axis of rotation. Has to be "1", "2", or "3", or "x", "y", or "z"
 % * label -- Name of angle
 %
 %% Output Arguments
@@ -20,14 +20,13 @@
 % The resulting symbolic matrices can be multiplied with each other.
 %
 %% Examples
-%    Rx = R_s(2, 'phi');
-%    Ry = R_s(3, 'theta');
+%    Rx = R_s('x', 'phi');
+%    Ry = R_s('y', 'theta');
 %    R_total = Rx * Ry
 
 % -------------------
-% ver:      0.1
 % author:   ThH
-% date:     Aug-2017
+% date:     April-2018
 
 function R_sym = R_s(dim, label)
 % for whatever reason, the following line crashed inside a function call
@@ -36,22 +35,33 @@ R_sym = sym('R_sym');
 angle = sym(label);
 
 % Check the input
-if ~any(dim == [1,2,3])
-    error([upper(f_name) ': dim has to be 1,2, or 3']);
+options_num = [1,2,3];
+options_char = ['x', 'y', 'z'];
+help_txt = [upper(mfilename) ': dim has to be 1, 2, or 3, or "x", "y", or "z"'];
+
+if ischar(dim)
+    if ~any(dim == options_char)
+        error(help_txt);
+    end
+else
+    if ~any(dim == [1,2,3])
+        error(help_txt);
+    end
+    dim = options_char(dim);
 end
 
 switch dim
-case 1
+case 'x'
     R_sym = [1      0       0;
              0 cos(angle) -sin(angle);
              0 sin(angle) cos(angle)];
 
-case 2
+case 'y'
     R_sym = [cos(angle)  0 sin(angle);
                 0        1       0;
             -sin(angle)  0 cos(angle)];
 
-case 3
+case 'z'
     R_sym = [cos(angle) -sin(angle) 0;
              sin(angle)  cos(angle) 0;
                 0           0       1];

@@ -1,5 +1,5 @@
 # kinematics_toolbox
-"3D Kinematics" is a library for scientific data analysis, with a focus on 3d kinematics.
+The Matlab "3D-Kinematics" toolbox is a library for scientific data analysis, with a focus on 3d kinematics.
 
 It ontains the following routines:
 

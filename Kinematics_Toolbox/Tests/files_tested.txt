@@ -1,22 +1,15 @@
 Done
 ====
 
-	analyze_3Dmarkers.m
-	analyze_imus.m
 X	calc_angvel.m
 X	calc_quat.m
-	check_input.m
 X	copysign.m
 X	deg2quat.m
 X	deg2rad.m
 X   dh.m
 X   dh_s.m
 X	find_trajectory.m
-	get_Xsens.m
 X	GramSchmidt.m
-	imu_Kalman.m
-	imu_Madgwick.m
-	imu_Mahony.m
 X	normalize.m
 X	plane_orientation.m
 X	project_vector.m
@@ -44,7 +37,14 @@ X	toRow.m
 X	unit_q.m
 X	vector_angle.m
 X	vector_length.m
-	view_orientation.m
 
 ToDo
 ====
+	analyze_3Dmarkers.m
+	analyze_imus.m
+	get_Xsens.m
+	check_input.m
+	imu_Kalman.m
+	imu_Madgwick.m
+	imu_Mahony.m
+	view_orientation.m

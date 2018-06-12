@@ -6,7 +6,7 @@
 %
 %% Input Arguments
 % * rot_mat -- Input rotation matrix [3x3], or rotation matrices [Nx9]
-% * to -- Output type. Has to be "quat" or "Gibbs"
+% * to -- Output type. Has to be "quat" (default) or "Gibbs"
 %
 %    'quat' -> quaterions
 %    'Gibbs'  -> Gibbs vectors
