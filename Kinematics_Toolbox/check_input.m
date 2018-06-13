@@ -1,8 +1,9 @@
 %% check_input
-% Utility function, that checks for two vector inputs.
+% Utility function, that ensures that two inputs have the same dimension.
 %
 % Input matrices must have the same dimension, or one input must be a
 % vector.
+% The dimension of the columns is not checked.
 %
 %% Syntax
 % |[v1_checked, v2_checked] = check_input(v1, v2, dim, f_name)|
@@ -10,12 +11,12 @@
 %% Input Arguments
 % * v1 -- First input vector
 % * v2 -- Second input vector
-% * dim -- Dimension of input (has to be "1" or "2")
+% * dim -- 1: take inputs as is; 2: transpose both(!) inputs
 % * fname -- Name of calling function
 %
 %% Output Arguments
 % * v1_checked -- v1, if necessary repeated to match v2
-% * v2_checked -- v2, if necessary repeated to match v1ber
+% * v2_checked -- v2, if necessary repeated to match v1
 % 
 
 
@@ -39,8 +40,8 @@ end
 if ~all(size(v1) == size(v2))
     % one of the inputs must be a vector
     if min([size(v1), size(v2)]) ~= 1
-        error([upper(f_name) ': The inputs must have the same dimension, '
-            'or the second input must be a vector']);
+        error([upper(f_name) ': The inputs must have the same dimension, ' ...
+            'or one must be a vector.']);
     elseif size(v1,1) == 1
         v1 = repmat(v1, size(v2,1), 1);
     else

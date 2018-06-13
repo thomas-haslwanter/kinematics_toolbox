@@ -5,7 +5,7 @@
 % author:  ThH
 
 %% Main function to generate tests
-function tests = vectorTest
+function tests = savgolTest
 
     tests = functiontests(localfunctions);
 

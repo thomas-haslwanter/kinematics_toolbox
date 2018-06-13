@@ -17,12 +17,12 @@
 %% Output Arguments
 % * data -- recorded raw data and processed data
 %           MATLAB-structure, with the following fields:
-%           - rate
-%           - acc
-%           - omega
-%           - mag
-%           - quat_sensor
-%           - time
+%           - rate [Hz]
+%           - acc [m/s^2]
+%           - omega [rad/s]
+%           - mag [unit-vector]
+%           - quat_sensor [4xN, quaternion]
+%           - time [s]
 % 
 
 % ----------------------
@@ -32,6 +32,7 @@
 
 function data = get_data(selection, data_type)
 
+    g = 9.80665;
     switch data_type
 
     case 'xsens'
@@ -80,10 +81,11 @@ function data = get_data(selection, data_type)
         % Get the data
         xIMUdata = xIMUdataClass(selection);
         
-        data.rate = xIMUdata.CalInertialAndMagneticData.SampleRate;
-        data.acc = to_matrix(xIMUdata.CalInertialAndMagneticData.Accelerometer);
-        data.omega =  to_matrix(xIMUdata.CalInertialAndMagneticData.Gyroscope);
-        data.mag = to_matrix(xIMUdata.CalInertialAndMagneticData.Magnetometer);
+        raw_data = xIMUdata.CalInertialAndMagneticData;
+        data.rate = raw_data.SampleRate;
+        data.acc = to_matrix(raw_data.Accelerometer) * g;       % to [m/s^2]
+        data.omega =  to_matrix(raw_data.Gyroscope) * pi/180;    % to [rad/s]
+        data.mag = to_matrix(raw_data.Magnetometer);
         data.quat_sensor = xIMUdata.QuaternionData.Quaternion;
         
         data.time = (1:size(data.acc,1))/data.rate; 
@@ -104,8 +106,8 @@ function data = get_data(selection, data_type)
         
         data_sensor = dlmread(fullfile(selection, 'sensors.csv'), ',', 1, 0);
         
-        data.omega = data_sensor(:,2:4);
-        data.acc   = data_sensor(:,5:7);
+        data.omega = data_sensor(:,2:4) * pi/180;    % to [rad/s]
+        data.acc   = data_sensor(:,5:7) * g;       % to [m/s^2]
         data.mag   = data_sensor(:,8:10);
         data.barometer = data_sensor(:,11);
 

@@ -79,7 +79,7 @@ for ii = 1:numPoints
     
     q2 = curOrientation * sin(beta/2);
 
-    if dot(cross(ba_refPos_after_q1,ba_curPos),curOrientation)<0
+    if dot(cross(ba_refPos_after_q1,ba_curPos),curOrientation)<=0
         q2 = -q2;
     end
     orientation(ii,:) = q_mult(q2, q1);

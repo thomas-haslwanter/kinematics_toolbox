@@ -28,7 +28,7 @@ end
 %% Test convert
 function test_rotmat_convert(testCase)
 
-    result = rotmat_convert(quat_convert([0, 0, 0.1], 'rot_mat'), 'quat');
+    result = rotmat_convert(quat_convert([0, 0, 0.1], 'rotmat'), 'quat');
     correct = [ 0.99498744,  0.        ,  0.        ,  0.1       ];
     errorMag = norm(result - correct);
     assertAlmostEqual(errorMag, 0);
