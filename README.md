@@ -3,7 +3,7 @@ The Matlab "3D-Kinematics" toolbox is a library for scientific data analysis, wi
 
 It ontains the following routines:
 
-## Analysis for IMU-recordings
+### Analysis for IMU-recordings
 
     * calculation of orientation from velocity, recorded with IMUs or space-fixed systems (four different algorithms are implemente here:
         - simple quaternion integration
@@ -17,20 +17,20 @@ It ontains the following routines:
     * a function that takes recordings from video-systems (e.g. Optotrak) and calculates position and orientation
     * calculation of joint movements from marker recordings
 
-Functions for working with quaternions
+### Functions for working with quaternions
 
     * quaternion multiplication, inversion, conjugate
     * conversions to rotation matrices, axis angles, vectors
     * a Quaternion class, including operator overloading for multiplication and division
     * also work on data arrays
 
-Functions for working with rotation matrices
+### Functions for working with rotation matrices
 
     * rotation matrices for rotations about the x-, y-, and z-axis
     * symbolic rotation matrices
     * conversions to Euler, Fick, Helmholtz angles
 
-Functions for working with vectors
+### Functions for working with vectors
 
     * angle between vectors
     * Gram-Schmidt orthogonalization
@@ -39,5 +39,4 @@ Functions for working with vectors
     * rotation
     * also work on data arrays
 
-Visualization of time-series data, and of 3D orientations
-
+### Visualization of time-series data, and of 3D orientations
