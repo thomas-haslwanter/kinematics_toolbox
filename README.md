@@ -3,17 +3,17 @@ The Matlab "3D-Kinematics" toolbox is a library for scientific data analysis, wi
 
 It ontains the following routines:
 
-Analysis for IMU-recordings
+## Analysis for IMU-recordings
 
     * calculation of orientation from velocity, recorded with IMUs or space-fixed systems (four different algorithms are implemente here:
         - simple quaternion integration
         - a quaternion Kalman filter
-        - Madgwick’s algorithm
-        - Mahony’s algorithm
+        - Madgwickâ€™s algorithm
+        - Mahonyâ€™s algorithm
     * calculation of position and orientation from IMU-signals
     * The sub-directory sensors contains utility to import in data from xio, XSens, and yei system
 
-Analysis routines for 3D movements from marker-based video recordings
+### Analysis routines for 3D movements from marker-based video recordings
     * a function that takes recordings from video-systems (e.g. Optotrak) and calculates position and orientation
     * calculation of joint movements from marker recordings
 
