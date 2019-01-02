@@ -5,38 +5,41 @@ It ontains the following routines:
 
 ### Analysis for IMU-recordings
 
-    * calculation of orientation from velocity, recorded with IMUs or space-fixed systems (four different algorithms are implemente here:
+    * Calculation of orientation from velocity, recorded with IMUs or space-fixed systems (four different algorithms are implemente here:
         - simple quaternion integration
         - a quaternion Kalman filter
         - Madgwick’s algorithm
         - Mahony’s algorithm
-    * calculation of position and orientation from IMU-signals
+    * Calculation of position and orientation from IMU-signals
     * The sub-directory sensors contains utility to import in data from xio, XSens, and yei system
 
 ### Analysis routines for 3D movements from marker-based video recordings
-    * a function that takes recordings from video-systems (e.g. Optotrak) and calculates position and orientation
-    * calculation of joint movements from marker recordings
+    * Function that takes recordings from video-systems (e.g. Optotrak) and calculates position and orientation
+    * Calculation of joint movements from marker recordings
 
 ### Functions for working with quaternions
 
-    * quaternion multiplication, inversion, conjugate
-    * conversions to rotation matrices, axis angles, vectors
-    * a Quaternion class, including operator overloading for multiplication and division
+    * Quaternion multiplication, inversion, conjugate
+    * Conversions to rotation matrices, axis angles, vectors
+    * Quaternion class, including operator overloading for multiplication and division
     * also work on data arrays
 
 ### Functions for working with rotation matrices
 
-    * rotation matrices for rotations about the x-, y-, and z-axis
-    * symbolic rotation matrices
-    * conversions to Euler, Fick, Helmholtz angles
+    * Rotation matrices for rotations about the x-, y-, and z-axis
+    * Symbolic rotation matrices
+    * Conversions to Euler, Fick, Helmholtz angles
 
 ### Functions for working with vectors
 
-    * angle between vectors
+    * Angle between vectors
     * Gram-Schmidt orthogonalization
-    * projection
-    * normalization
-    * rotation
+    * Projection
+    * Normalization
+    * Rotation
     * also work on data arrays
 
-### Visualization of time-series data, and of 3D orientations
+### Visualization 
+
+   * Time-series data
+   * 3D orientations
